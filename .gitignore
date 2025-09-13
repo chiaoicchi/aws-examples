@@ -1,9 +1,16 @@
 # Terraform
-**/.terraform
+**/.terraform/
 **/.terraform.lock.hcl
+**/.terraform.tfstate.lock.info
 **/terraform.tfstate
 **/terraform.tfstate.backup
 **/terraform.tfvars
 
+# Rust
+**/target/
+
 # Mac
 .DS_Store
+
+# Zip
+**/*.zip

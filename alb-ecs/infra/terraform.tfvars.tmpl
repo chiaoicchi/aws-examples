@@ -1,0 +1,16 @@
+prefix                               = "alb-cognito-ecs"
+parent_domain                        = "<ドメイン元>"
+sub_domain                           = "<サブドメイン>"
+parent_domain_cross_account_role_arn = "<ドメインのあるリージョンに作成した IAM ロールの ARN>"
+app_port                             = 3000
+need_authenticate                    = true
+default_users = {
+  "user" = {
+    email    = "user@example.com"
+    password = "TemporaryPassword1!"
+  }
+}
+enable_execute_command = true
+delete_app_ecr         = true
+delete_alb_logs_bucket = true
+use_nat_gateway        = false
