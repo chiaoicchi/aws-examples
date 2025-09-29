@@ -13,6 +13,6 @@ variable "tags" {
 }
 
 variable "delete_s3" {
-  type = bool
+  type    = bool
   default = false
 }
