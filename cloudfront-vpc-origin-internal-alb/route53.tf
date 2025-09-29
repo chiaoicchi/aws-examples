@@ -15,8 +15,8 @@ resource "aws_route53_record" "cloudfront" {
   type            = "A"
   allow_overwrite = true
   alias {
-    name                    = aws_cloudfront_distribution.this.domain_name
-    zone_id                 = aws_cloudfront_distribution.this.hosted_zone_id
+    name                   = aws_cloudfront_distribution.this.domain_name
+    zone_id                = aws_cloudfront_distribution.this.hosted_zone_id
     evaluate_target_health = true
   }
 }
@@ -27,8 +27,8 @@ resource "aws_route53_record" "wildcard_cloudfront" {
   type            = "A"
   allow_overwrite = true
   alias {
-    name                    = aws_cloudfront_distribution.this.domain_name
-    zone_id                 = aws_cloudfront_distribution.this.hosted_zone_id
+    name                   = aws_cloudfront_distribution.this.domain_name
+    zone_id                = aws_cloudfront_distribution.this.hosted_zone_id
     evaluate_target_health = true
   }
 }

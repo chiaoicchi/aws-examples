@@ -10,7 +10,7 @@ resource "aws_cloudfront_distribution" "this" {
   aliases = ["${var.sub_domain}", "*.${var.sub_domain}"]
   default_cache_behavior {
     allowed_methods          = ["HEAD", "GET"]
-    cached_methods            = ["HEAD", "GET"]
+    cached_methods           = ["HEAD", "GET"]
     target_origin_id         = aws_lb.this.id
     viewer_protocol_policy   = "https-only"
     min_ttl                  = 0
