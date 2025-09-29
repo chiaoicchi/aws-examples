@@ -21,11 +21,3 @@ provider "aws" {
   region = "us-east-1"
 }
 
-locals {
-  tags = merge(
-    var.tags,
-    {
-      "Prefix" = var.prefix,
-    }
-  )
-}
