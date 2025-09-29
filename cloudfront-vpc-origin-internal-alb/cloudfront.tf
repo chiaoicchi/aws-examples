@@ -7,7 +7,7 @@ resource "aws_cloudfront_distribution" "this" {
     }
   }
   enabled = true
-  aliases = ["${var.sub_domain}", "*.${var.sub_domain}"]
+  aliases = [var.sub_domain, "*.${var.sub_domain}"]
   default_cache_behavior {
     allowed_methods          = ["HEAD", "GET"]
     cached_methods           = ["HEAD", "GET"]
