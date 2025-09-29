@@ -1,14 +1,14 @@
 resource "aws_cloudtrail" "this" {
-  name = "${var.prefix}-cloudtrail"
+  name           = "${var.prefix}-cloudtrail"
   s3_bucket_name = aws_s3_bucket.this.id
-  tags = local.tags
-  depends_on = [aws_s3_bucket_policy.this]
+  tags           = local.tags
+  depends_on     = [aws_s3_bucket_policy.this]
 }
 
 resource "aws_s3_bucket" "this" {
-  bucket = "${var.prefix}-cloudtrail-logs"
+  bucket        = "${var.prefix}-cloudtrail-logs"
   force_destroy = var.delete_s3
-  tags = local.tags
+  tags          = local.tags
 }
 
 resource "aws_s3_bucket_lifecycle_configuration" "this" {
@@ -50,7 +50,7 @@ resource "aws_s3_bucket_policy" "this" {
         Resource = "${aws_s3_bucket.this.arn}/AWSLogs/${data.aws_caller_identity.current.account_id}/*"
         Condition = {
           StringEquals = {
-            "s3:x-amz-acl" = "bucket-owner-full-control",
+            "s3:x-amz-acl"  = "bucket-owner-full-control",
             "aws:SourceArn" = "arn:${data.aws_partition.current.partition}:cloudtrail:${var.aws_region}:${data.aws_caller_identity.current.account_id}:trail/${var.prefix}-cloudtrail"
           }
         }
