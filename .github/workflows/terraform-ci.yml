@@ -1,0 +1,58 @@
+name: CI (Terraform)
+
+on:
+  pull_request:
+    paths:
+      - "**.tf"
+  workflow_dispatch:
+
+env:
+  TERRAFORM_VERSION: "1.12.0"
+
+jobs:
+  terraform-ci:
+    name: Lint & Format - ${{ matrix.dir }} (Terraform)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dir:
+          - account-settings
+          - alb-ecs/infra
+          - cloudfront-vpc-origin-internal-alb
+          - cloudtrail
+          - subdomain-phz/parent-phz
+          - subdomain-phz/sub-phz
+          - vpc
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TERRAFORM_VERSION }}
+
+      - name: Terraform init
+        run: terraform init -backend=false
+        working-directory: ${{ matrix.dir }}
+
+      - name: Terraform validate
+        run: terraform validate
+        working-directory: ${{ matrix.dir }}
+
+      - name: Terraform format
+        run: terraform fmt -check -recursive
+        working-directory: ${{ matrix.dir }}
+
+      - name: Tflint install
+        run: curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+
+      - name: Tflint init
+        run: tflint --init
+        working-directory: ${{ matrix.dir }}
+
+      - name: Run tflint
+        run: tflint --recursive
+        working-directory: ${{ matrix.dir }}
