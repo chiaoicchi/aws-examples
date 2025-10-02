@@ -9,6 +9,9 @@
 # Rust
 **/target/
 
+# Python
+**/.venv/
+
 # Mac
 .DS_Store
 
