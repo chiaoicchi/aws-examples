@@ -33,3 +33,8 @@ aws bedrock list-foundation-models \
     | select(.inferenceTypesSupported[]? == "ON_DEMAND") 
     | .modelId'
 ```
+
+## Converse Stream API
+
+This API maybe using [HTTP/2-streaming](https://httpwg.org/specs/rfc7540.html#StreamsLayer).
+If you send request, server send response as many chunks and send END-STREAM flag.
