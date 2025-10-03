@@ -5,9 +5,14 @@ description = "Hands-on code of AIエージェント開発/運用入門"
 requires-python = ">=3.13, <3.14"
 
 dependencies = [
+  ## langgraph
   "langchain",
   "langgraph",
   "langchain-aws",
+
+  ## crew ai
+  "crewai",
+
   "boto3",
   "python-dotenv",
   "ruff",
