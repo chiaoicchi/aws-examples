@@ -1,5 +1,5 @@
 [project]
-name = "ai-agent-handson"
+name = "converse-api"
 version = "0.1.0"
 description = "Hands-on code of AIエージェント開発/運用入門"
 requires-python = ">=3.13, <3.14"
