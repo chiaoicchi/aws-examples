@@ -1,0 +1,28 @@
+{
+  "name": "mastra_trial",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "ci": "pnpm run test && pnpm run lint && pnpm run format:check"
+  },
+  "keywords": [],
+  "author": "chiaoi",
+  "packageManager": "pnpm@10.18.0",
+  "devDependencies": {
+    "@types/node": "22.7.9",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.6.3"
+  },
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^3.0.30",
+    "@aws-sdk/credential-providers": "^3.901.0",
+    "@mastra/core": "^0.20.0",
+    "zod": "^4.1.11"
+  }
+}

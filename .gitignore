@@ -9,8 +9,19 @@
 # Rust
 **/target/
 
+# Python
+**/.venv/
+**/__pycache__/
+
+# TypeScript
+**/node_modules/
+**/dist/
+
 # Mac
 .DS_Store
 
 # Zip
 **/*.zip
+
+# Env
+**/.env

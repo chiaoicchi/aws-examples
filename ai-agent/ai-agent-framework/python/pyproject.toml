@@ -1,0 +1,34 @@
+[project]
+name = "ai-agent-framework"
+version = "0.1.0"
+description = "Hands-on code of AIエージェント開発/運用入門"
+requires-python = ">=3.13, <3.14"
+
+dependencies = [
+  ## langgraph
+  "langchain",
+  "langgraph",
+  "langchain-aws",
+
+  ## crew ai
+  "crewai",
+
+  ## AutoGen
+  "autogen_agentchat",
+  "autogen_ext",
+
+  ## OpenAI Agents SDK
+  "openai-agents",
+
+  ## Google ADK
+  "google-adk",
+
+  ## Strands Agent
+  "strands-agents",
+
+  "streamlit",
+  "feedparser",
+  "boto3",
+  "python-dotenv",
+  "ruff",
+]
