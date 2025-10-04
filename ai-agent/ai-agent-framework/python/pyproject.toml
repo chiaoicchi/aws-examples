@@ -17,6 +17,17 @@ dependencies = [
   "autogen_agentchat",
   "autogen_ext",
 
+  ## OpenAI Agents SDK
+  "openai-agents",
+
+  ## Google ADK
+  "google-adk",
+
+  ## Strands Agent
+  "strands-agents",
+
+  "streamlit",
+  "feedparser",
   "boto3",
   "python-dotenv",
   "ruff",
