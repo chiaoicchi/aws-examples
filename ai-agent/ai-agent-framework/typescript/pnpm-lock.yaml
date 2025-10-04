@@ -57,12 +57,15 @@ importers:
 
   packages/voltagent_trial:
     dependencies:
+      '@ai-sdk/amazon-bedrock':
+        specifier: ^3.0.30
+        version: 3.0.30(zod@4.1.11)
+      '@aws-sdk/credential-providers':
+        specifier: ^3.901.0
+        version: 3.901.0
       '@voltagent/core':
         specifier: ^1.1.25
         version: 1.1.25(@ai-sdk/provider-utils@3.0.10(zod@4.1.11))(ai@5.0.44(zod@4.1.11))(zod@4.1.11)
-      '@voltagent/vercel-ai':
-        specifier: ^1.0.0
-        version: 1.0.0(@voltagent/core@1.1.25(@ai-sdk/provider-utils@3.0.10(zod@4.1.11))(ai@5.0.44(zod@4.1.11))(zod@4.1.11))(zod@4.1.11)
       add:
         specifier: ^2.0.6
         version: 2.0.6
@@ -72,6 +75,9 @@ importers:
       pnpm:
         specifier: ^10.18.0
         version: 10.18.0
+      zod:
+        specifier: ^4.1.11
+        version: 4.1.11
     devDependencies:
       '@types/node':
         specifier: 22.7.9
@@ -106,12 +112,6 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.25.76 || ^4
-
-  '@ai-sdk/openai@2.0.42':
-    resolution: {integrity: sha512-9mM6QS8k0ooH9qMC27nlrYLQmNDnO6Rk0JTmFo/yUxpABEWOcvQhMWNHbp9lFL6Ty5vkdINrujhsAQfWuEleOg==}
-    engines: {node: '>=18'}
-    peerDependencies:
-      zod: ^3.25.76 || ^4.1.8
 
   '@ai-sdk/provider-utils@2.2.8':
     resolution: {integrity: sha512-fqhG+4sCVv8x7nFzYnFo19ryhAa3w096Kmc3hWxMQfW/TubPOmt3A6tYZhl4mUfQWWQMsuSkLrtjlWuXBVSGQA==}
@@ -1335,12 +1335,6 @@ packages:
 
   '@voltagent/internal@0.0.11':
     resolution: {integrity: sha512-WI9oC0LFvDDxaIbeXB7KIFbx7v42KBf7zRd96wRNx7K+Tga8OlzI0kj/HAPiYL+zhCta/S+uR8+XZFkzF8WDug==}
-
-  '@voltagent/vercel-ai@1.0.0':
-    resolution: {integrity: sha512-ooknKRG0G79YuHJAPuZ5Xoy1oiirq0XfyS5ncKO2+yMqasRSn5phd8wHq5x4nVwRFMY1mulo3YZJ2QGQLj1mIg==}
-    peerDependencies:
-      '@voltagent/core': ^0.1.71
-      zod: ^3.25.0
 
   accepts@1.3.8:
     resolution: {integrity: sha512-PYAthTa2m2VKxuvSD3DPC/Gy+U+sOA1LAuT8mkmRuvw+NACSaeXEQ+NHcVF7rONl6qcaxV3Uuemwawk+7+SJLw==}
@@ -2877,12 +2871,6 @@ snapshots:
     dependencies:
       '@ai-sdk/provider': 2.0.0
       '@ai-sdk/provider-utils': 3.0.9(zod@4.1.11)
-      zod: 4.1.11
-
-  '@ai-sdk/openai@2.0.42(zod@4.1.11)':
-    dependencies:
-      '@ai-sdk/provider': 2.0.0
-      '@ai-sdk/provider-utils': 3.0.10(zod@4.1.11)
       zod: 4.1.11
 
   '@ai-sdk/provider-utils@2.2.8(zod@4.1.11)':
@@ -4836,15 +4824,6 @@ snapshots:
   '@voltagent/internal@0.0.11':
     dependencies:
       type-fest: 4.41.0
-
-  '@voltagent/vercel-ai@1.0.0(@voltagent/core@1.1.25(@ai-sdk/provider-utils@3.0.10(zod@4.1.11))(ai@5.0.44(zod@4.1.11))(zod@4.1.11))(zod@4.1.11)':
-    dependencies:
-      '@ai-sdk/openai': 2.0.42(zod@4.1.11)
-      '@voltagent/core': 1.1.25(@ai-sdk/provider-utils@3.0.10(zod@4.1.11))(ai@5.0.44(zod@4.1.11))(zod@4.1.11)
-      ai: 5.0.44(zod@4.1.11)
-      ts-pattern: 5.8.0
-      type-fest: 4.41.0
-      zod: 4.1.11
 
   accepts@1.3.8:
     dependencies:
