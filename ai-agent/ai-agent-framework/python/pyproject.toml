@@ -13,6 +13,10 @@ dependencies = [
   ## crew ai
   "crewai",
 
+  ## AutoGen
+  "autogen_agentchat",
+  "autogen_ext",
+
   "boto3",
   "python-dotenv",
   "ruff",
