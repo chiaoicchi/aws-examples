@@ -13,6 +13,10 @@
 **/.venv/
 **/__pycache__/
 
+# TypeScript
+**/node_modules/
+**/dist/
+
 # Mac
 .DS_Store
 
