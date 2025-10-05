@@ -1,0 +1,21 @@
+[project]
+name = "langgraph-human-in-the-loop"
+version = "0.1.0"
+description = "Hands-on code of AIエージェント開発/運用入門"
+requires-python = ">=3.13, <3.14"
+
+dependencies = [
+  "langchain",
+  "langchain-aws",
+  "langchain-community",
+  "langchain-tavily",
+  "langgraph",
+
+  "streamlit",
+
+  "python-dotenv",
+  "pydantic",
+  "boto3",
+  "python-dotenv",
+  "ruff",
+]
