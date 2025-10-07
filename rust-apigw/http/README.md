@@ -26,7 +26,8 @@ cargo lambda build --release --arm64
 ### Upload to aws
 
 ```bash
-zip -j bootstrap.zip target/lambda/web-backend/bootstrap
+cd target/lambda/http/
+zip -j bootstrap.zip bootstrap
 ```
 
 Use custom runtime and upload the zip file you created above command.
