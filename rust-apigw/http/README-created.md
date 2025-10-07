@@ -1,6 +1,6 @@
 # Introduction
 
-web-backend is a Rust project that implements an AWS Lambda function in Rust.
+http is a Rust project that implements an AWS Lambda function in Rust.
 
 ## Prerequisites
 
