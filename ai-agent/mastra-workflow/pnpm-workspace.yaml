@@ -1,0 +1,5 @@
+packages:
+  - ./packages/mastra-workflow
+
+ignoredBuiltDependencies:
+  - protobufjs
