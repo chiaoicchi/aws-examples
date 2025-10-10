@@ -1,6 +1,6 @@
 import { createAmazonBedrock } from "@ai-sdk/amazon-bedrock";
 import { fromNodeProviderChain } from "@aws-sdk/credential-providers";
-import { Agent } from "@mastra/core/agent";
+import { Agent } from "@mastra/core";
 
 // Bedrock model
 const bedrock = createAmazonBedrock({
