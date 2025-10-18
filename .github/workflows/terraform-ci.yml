@@ -18,6 +18,7 @@ jobs:
         dir:
           - account-settings
           - alb-ecs/infra
+          - apige-lambda/terraform
           - cloudfront-vpc-origin-internal-alb
           - cloudtrail
           - subdomain-phz/parent-phz
